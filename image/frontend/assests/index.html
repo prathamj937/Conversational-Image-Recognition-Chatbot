@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Recognition Chatbot</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Image Recognition Chatbot</h1>
+      <p>Upload images of birds, dogs, flowers, or landmarks</p>
+    </header>
+
+    <main>
+      <section class="upload-section">
+        <div class="drop-zone" id="dropZone">
+          <span class="drop-zone__prompt">Drop image here or click to upload</span>
+          <input type="file" id="fileInput" class="drop-zone__input" accept="image/*">
+        </div>
+        <div class="model-selector">
+          <label for="modelType">Select model:</label>
+          <select id="modelType">
+            <option value="auto">Auto Detect</option>
+            <option value="bird">Bird</option>
+            <option value="dog">Dog</option>
+            <option value="flower">Flower</option>
+            <option value="landmark">Landmark</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <div class="image-preview" id="imagePreview"></div>
+        <div class="prediction-results" id="predictionResults"></div>
+      </section>
+
+      <section class="chat-section">
+        <div class="chat-history" id="chatHistory"></div>
+        <div class="chat-input">
+          <input type="text" id="chatInput" placeholder="Ask about the image...">
+          <button id="sendButton">Send</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
